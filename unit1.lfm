@@ -1,0 +1,135 @@
+object Form1: TForm1
+  Left = 1281
+  Height = 271
+  Top = 173
+  Width = 429
+  Caption = 'Обобщенная Судоку'
+  ClientHeight = 271
+  ClientWidth = 429
+  Color = clWhite
+  LCLVersion = '2.0.0.4'
+  object StringGrid1: TStringGrid
+    Left = 9
+    Height = 184
+    Top = 48
+    Width = 184
+    Color = clWhite
+    ColCount = 9
+    DefaultColWidth = 20
+    DefaultRowHeight = 20
+    FixedCols = 0
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 9
+    TabOrder = 0
+    OnDrawCell = StringGrid1DrawCell
+    OnKeyPress = StringGrid1KeyPress
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 323
+    Height = 23
+    Top = 24
+    Width = 92
+    EditLabel.Height = 15
+    EditLabel.Width = 92
+    EditLabel.Caption = 'Порядок Судоку:'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+    Text = '9'
+    OnKeyPress = LabeledEdit1KeyPress
+  end
+  object LabeledEdit2: TLabeledEdit
+    Left = 323
+    Height = 23
+    Top = 72
+    Width = 96
+    EditLabel.Height = 15
+    EditLabel.Width = 96
+    EditLabel.Caption = 'Номер решения:'
+    EditLabel.ParentColor = False
+    TabOrder = 2
+    Visible = False
+    OnKeyPress = LabeledEdit2KeyPress
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 240
+    Width = 177
+    AutoSize = True
+    Caption = 'Найти варианты решения'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsUnderline]
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 200
+    Height = 25
+    Top = 207
+    Width = 132
+    AutoSize = True
+    Caption = 'Показать решения '
+    OnClick = Button2Click
+    TabOrder = 4
+    Visible = False
+  end
+  object Button3: TButton
+    Left = 192
+    Height = 25
+    Top = 240
+    Width = 227
+    AutoSize = True
+    Caption = 'Завершить демонстрацию решений'
+    OnClick = Button3Click
+    TabOrder = 5
+    Visible = False
+  end
+  object Label2: TLabel
+    Left = 192
+    Height = 1
+    Top = 24
+    Width = 1
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 9
+    Height = 25
+    Top = 8
+    Width = 71
+    Caption = 'Судоку:'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button4: TButton
+    Left = 340
+    Height = 25
+    Top = 207
+    Width = 75
+    Caption = 'TDS'
+    OnClick = Button4Click
+    TabOrder = 6
+    Visible = False
+  end
+end
